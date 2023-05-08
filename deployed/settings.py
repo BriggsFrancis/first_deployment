@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'deployed.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('NAME'), 
-        'USER': os.environ.get('USER_topg'),
-        'PASSWORD': os.environ.get('PASSWORD'),
-        'HOST': os.environ.get('HOST'), 
-        'PORT': os.environ.get('PORT'),
+        'NAME': os.environ.get('POSTGRES_NAME'), 
+        'USER': os.environ.get('POSTGRES_USER_topg'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': os.environ.get('POSTGRES_PG_HOST'), 
+        'PORT': os.environ.get('POSTGRES_PORT'),
     }
 }
 
